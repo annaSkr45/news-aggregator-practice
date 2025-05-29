@@ -85,5 +85,5 @@ const chart = new Chart(canvasCtx, {
 // 4) Обробник зміни фільтра
 filterSelect.addEventListener("change", render);
 
-// 5) Завантаження даних при старті
+// 5) Завантаження даних при старті 
 window.addEventListener("load", loadData); 
