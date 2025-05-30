@@ -40,7 +40,7 @@ jobs:
         uses: actions/checkout@v3
 
       - name: Install http-server
-        run: npm install -g http-server
+        run: npm install http-server
 
       - name: Запустити локальний сервер фронтенду
         run: |
