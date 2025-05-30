@@ -5,6 +5,7 @@ from config import STUDENT_ID
 client = TestClient(app)
 
 def test_get_empty_sources():
+    news_store.clear()
     res = client.get(f"/sources/{STUDENT_ID}")
     assert res.status_code == 200
     assert res.json() == {"sources": []}
