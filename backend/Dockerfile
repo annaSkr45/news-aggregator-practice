@@ -12,8 +12,8 @@ RUN pip install --no-cache-dir -r requirements.txt
 COPY backend/   ./
 COPY config.py  ./
 
-STUDENT_ID
-COPY .env       ./           # (якщо є файл .env для секретів)
+ENV STUDENT_ID=annaSkr45
+       
 
 # ---------- 5. Відкриваємо порт для FastAPI ----------
 EXPOSE 8000
