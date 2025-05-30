@@ -50,5 +50,5 @@ jobs:
       - name: Перевірити доступність index.html
         run: |
           sleep 2
-          curl -f <http://localhost:8001/index.html>
+          curl -f http://localhost:8001/index.html
 
