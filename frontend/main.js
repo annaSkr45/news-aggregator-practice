@@ -1,8 +1,9 @@
+// Глобальні змінні
 let allArticles = [];
 
 const filterSelect = document.getElementById("filter-select");
-const tableBody    = document.querySelector("#articles-table tbody");
-const canvasCtx    = document.getElementById("sentiment-chart").getContext("2d");
+const tableBody = document.querySelector("#articles-table tbody");
+const canvasCtx = document.getElementById("sentiment-chart").getContext("2d");
 
 // 1) Функція завантаження даних
 async function loadData() {
@@ -42,7 +43,7 @@ function render() {
 
   // 2.1) Оновлюємо таблицю
   tableBody.innerHTML = filtered
-    .sort((a,b) => b.date - a.date)
+    .sort((a, b) => b.date - a.date)
     .map(a => `
       <tr>
         <td>${a.date.toLocaleString()}</td>
@@ -52,8 +53,9 @@ function render() {
     `).join("");
 
   // 2.2) Підрахунок для діаграми
-  const counts = { positive:0, neutral:0, negative:0 };
+  const counts = { positive: 0, neutral: 0, negative: 0 };
   filtered.forEach(a => counts[a.sentiment]++);
+
   chart.data.datasets[0].data = [
     counts.positive,
     counts.neutral,
@@ -66,10 +68,10 @@ function render() {
 const chart = new Chart(canvasCtx, {
   type: 'pie',
   data: {
-    labels: ['Позитивні','Нейтральні','Негативні'],
+    labels: ['Позитивні', 'Нейтральні', 'Негативні'],
     datasets: [{
-      data: [0,0,0],
-      backgroundColor: ['#4caf50','#ffca28','#f44336']
+      data: [0, 0, 0],
+      backgroundColor: ['#4caf50', '#ffca28', '#f44336']
     }]
   },
   options: {
@@ -85,5 +87,5 @@ const chart = new Chart(canvasCtx, {
 // 4) Обробник зміни фільтра
 filterSelect.addEventListener("change", render);
 
-// 5) Завантаження даних при старті 
-window.addEventListener("load", loadData); 
+// 5) Завантаження даних при старті
+window.addEventListener("load", loadData);
