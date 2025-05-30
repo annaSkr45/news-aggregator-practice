@@ -1,5 +1,6 @@
-# Minor change to trigger CIf
+# Minor change to trigger CIfва
 # from fastapi import FastAPI, HTTPException
+from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 import config
 from config import STUDENT_ID, SOURCES
