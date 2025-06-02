@@ -45,10 +45,10 @@ jobs:
       - name: Запустити локальний сервер фронтенду
         run: |
           cd frontend
-          nohup http-server 8001 &
+          nohup http-server frontend -p 8001 &
 
       - name: Перевірити доступність index.html
         run: |
           sleep 2
-          curl http://localhost:8001
+          curl http://localhost:8001/index.html
 
