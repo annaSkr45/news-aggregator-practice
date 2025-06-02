@@ -1,4 +1,4 @@
-# Minor change to trigger CIif
+# Minor change to trigger CIifd
 name: CI
 
 on:
