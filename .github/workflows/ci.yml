@@ -1,4 +1,4 @@
-# Minor change to trigger CIifddds
+# Minor change to trigger CIifdddss
 name: CI
 
 on:
@@ -49,6 +49,6 @@ jobs:
 
       - name: Перевірити доступність index.html
         run: |
-          sleep 2
+          sleep 5
           curl http://localhost:8001/index.html
 
