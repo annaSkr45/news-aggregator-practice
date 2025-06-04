@@ -1,4 +1,4 @@
-# Minor change to trigger CIifddd
+# Minor change to trigger CIifddds
 name: CI
 
 on:
@@ -45,7 +45,7 @@ jobs:
       - name: Запустити локальний сервер фронтенду
         run: |
           cd frontend
-          nohup http-server frontend -p 8001 &
+          nohup http-server -p 8001 &
 
       - name: Перевірити доступність index.html
         run: |
