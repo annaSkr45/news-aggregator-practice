@@ -7,6 +7,12 @@ on:
   pull_request:
     branches: [ main ]
 
+env:
+  REGISTRY:  ghcr.io
+  IMAGE_NAME: ${{ github.repository_owner }}/news-backend
+  PY_VERSION: "3.13"
+
+
 jobs:
   backend-tests:
     name: Backend запуск тестів
