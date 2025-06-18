@@ -11,8 +11,9 @@ RUN pip install --no-cache-dir -r requirements.txt
 # ---------- 4. Копіюємо код бекенду і конфігурацію ----------
 COPY backend/   ./
 COPY config.py  ./
+# COPY .env       ./ 
 
-ENV STUDENT_ID=annaSkr45
+# ENV STUDENT_ID=annaSkr45
        
 
 # ---------- 5. Відкриваємо порт для FastAPI ----------
@@ -20,3 +21,4 @@ EXPOSE 8000
 
 # ---------- 6. Команда запуску ----------
 CMD ["uvicorn", "app:app", "--host", "0.0.0.0", "--port", "8000"]
+
