@@ -81,8 +81,8 @@ jobs:
           file: backend/Dockerfile
           push: true
           tags: |
-            ${{ env.REGISTRY }}/${{ toLower(github.actor) }}/${{ env.IMAGE_NAME }}:latest
-            ${{ env.REGISTRY }}/${{ toLower(github.actor) }}/${{ env.IMAGE_NAME }}:${{ github.sha }}
+            ${{ env.REGISTRY }}/${{ env.REPO_OWNER_LOWER }}/news-backend:latest
+            ${{ env.REGISTRY }}/${{ env.REPO_OWNER_LOWER }}/news-backend:${{ github.sha }}
 
       # ${{ env.REGISTRY }}/${{ env.IMAGE_NAME }}:latest
       #       ${{ env.REGISTRY }}/${{ env.IMAGE_NAME }}:${{ github.sha }}
