@@ -1,4 +1,4 @@
-# Minor change to trigger CIifdddsssdвв
+# Minor change to trigger CIifdddsssdвві
 name: CI
 
 on:
@@ -81,9 +81,9 @@ jobs:
           file: backend/Dockerfile
           push: true
           tags: |
-            ${{ env.REGISTRY }}/${{ github.actor && github.actor.toLowerCase() }}/${{ env.IMAGE_NAME }}:latest
-            ${{ env.REGISTRY }}/${{ github.actor && github.actor.toLowerCase() }}/${{ env.IMAGE_NAME }}:${{ github.sha }}
-      
+            ${{ env.REGISTRY }}/${{ toLower(github.actor) }}/${{ env.IMAGE_NAME }}:latest
+            ${{ env.REGISTRY }}/${{ toLower(github.actor) }}/${{ env.IMAGE_NAME }}:${{ github.sha }}
+
       # ${{ env.REGISTRY }}/${{ env.IMAGE_NAME }}:latest
       #       ${{ env.REGISTRY }}/${{ env.IMAGE_NAME }}:${{ github.sha }}
 
